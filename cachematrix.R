@@ -1,5 +1,5 @@
 # makeCcheMatrix is a function to set a matrix and get a matrix
-# cacheSolve is matrix used to solve the inverse of imput matrix
+# cacheSolve is matrix used to solve the inverse of imput matrix  
 
 # makeCacheMatrix contains four functions: set, setinverse, get, getinverse
 makeCacheMatrix <- function(x = matrix()) {
