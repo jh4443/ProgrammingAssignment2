@@ -4,13 +4,13 @@
 # makeCacheMatrix contains four functions: set, setinverse, get, getinverse
 makeCacheMatrix <- function(x = matrix()) {
         inverse_the_mat  <- NULL
-        set = function(y){                                                            # set matrix
+        set = function(y){                                                            # Set matrix
                 x <<- y
                 inverse_the_mat <<- NULL
         }
-        get <- function() x                                                           # get matrix                           
-        setinverse <- function(inverse) inverse_the_mat <- inverse                    # set inverse of matrix
-        getinverse <- function() inverse_the_mat                                      # get inverse of matrix
+        get <- function() x                                                           # Get matrix
+        setinverse <- function(inverse) inverse_the_mat <- inverse                    # Set inverse of matrix
+        getinverse <- function() inverse_the_mat                                      # Get inverse of matrix
         list(set = set, get = get, setinverse = setinverse,getinverse = getinverse)
 }
 
@@ -23,8 +23,8 @@ cacheSolve <- function(x, ...) {
                 message("getting cached data")
                 return(inv)                                       # If it isn't empty, return the cache
         }
-        mat <- x$get()                                            # get the matrix
-        inverse_the_mat <- solve(mat)                             # calculate the inverse matrix
-        x$setinverse(inverse_the_mat)                             # set the inverse matrix
-        inverse_the_mat                                           # output the inverse matrix
+        mat <- x$get()                                            # Get the matrix
+        inverse_the_mat <- solve(mat)                             # Calculate the inverse matrix
+        x$setinverse(inverse_the_mat)                             # Set the inverse matrix
+        inverse_the_mat                                           # Output the inverse matrix
 }
